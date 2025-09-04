@@ -1,0 +1,23 @@
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+div.smalltitle{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 1.5em;
+    max-width: 55%;
+}
+
+.paragraph{
+    font-size: .8em;
+    font-weight: normal;
+    margin-bottom: 1em;
+    padding: 0.5em;
+}
