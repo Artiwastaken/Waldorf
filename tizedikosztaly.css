@@ -25,6 +25,7 @@ div.smalltitle{
 .picture{
     margin-left: auto;
     margin-right: auto;
+    font-weight: normal;
     max-width: 50%;
     height: auto;
 }
