@@ -1,0 +1,65 @@
+% Egyenletrendszerek – jegyzet
+\documentclass[12pt,a4paper]{article}
+
+% Nyelv és kódolás
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[magyar]{babel}
+
+% Matematika
+\usepackage{amsmath,amssymb}
+
+% Oldalbeállítások (egyszerű)
+\usepackage[margin=2.5cm]{geometry}
+
+\title{Egyenletrendszerek}
+\author{10.\ osztály}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section*{Bevezetés}
+\noindent Ebben a anyagban röviden áttekintjük a egyenletrendszerek megoldásának módszereit:
+ behelyettesítés, összeadás-kivonás (elimináció), valamint grafikus módszerek alapjai.
+\\\\
+\noindent A következő a feladat:
+Béla 3 évvel ezelőtt háromszor annyi idős volt, mint András, három év múlva pedig kétszer annyi idős lesz. Hány évesek most?
+\\\\
+\noindent A két ismeretlenes egyenletrendszer felírásához jelöljük Béla életkorát $y$-nal, Andrásét pedig $x$-szel. 
+Ekkor a feladat szövegéből az alábbi egyenleteket írhatjuk fel:
+\begin{align*}
+	y-3 &= 3(x-3)\\
+	y+3 &= 2(x+3)
+\end{align*}
+\noindent A zárójeleket kibontjuk és átalakítjuk:
+\begin{align*}
+	y - 3 &= 3x - 9 \quad \Rightarrow \quad y=3x-6\\ 
+	y + 3 &= 2x + 6 \quad \Rightarrow \quad y=2x+3
+\end{align*}
+
+\noindent Grafikus megoldáshoz oldjuk meg az egyenleteket pontonként és ábrázoljuk a kapott pontokat koordináta-rendszerben. 
+Ahol a pontokat összekötő két egyenes metszi egymást, ott van a megoldás.
+\\\\
+Behelyettesítéses megoldás esetén azt csináljuk, hogy az egyik egyenletből kifejezzük az egyik ismeretlent, és ezt behelyettesítjük a másik egyenletbe. 
+Például az első egyenletből kifejezzük $y$-t:
+\begin{align*}
+	y &= 3x - 6 
+\end{align*}
+
+\noindent Behelyettesítjük a második egyenletbe az $x$ helyére:
+\begin{align*}	
+	3x - 6 &= 2x + 3 \\
+	3x - 2x &= 3 + 6 \\
+	x &= 9
+\end{align*}
+
+\noindent Ezt visszahelyettesítjük az első egyenletbe:
+\begin{align*}
+	y &= 3 \cdot 9 - 6 = 27 - 6 = 21
+\end{align*}
+
+\noindent Tehát András 9 éves, Béla pedig 21 éves.
+
+\end{document}
