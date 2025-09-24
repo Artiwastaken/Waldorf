@@ -1,0 +1,54 @@
+% Box plot – jegyzet
+\documentclass[12pt,a4paper]{article}
+
+% Nyelv és kódolás
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[magyar]{babel}
+
+% Matematika és felsorolás
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+
+% Oldalbeállítások (egyszerű)
+\usepackage[margin=2.5cm]{geometry}
+
+\title{Box plot (doboz-ábra)}
+\author{12.\ osztály}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\subsubsection*{Bevezetés}
+\noindent A box plot (doboz-ábra) egy adat\-eloszlást szemléltető grafikon, általában a számegyenesen ábrázoljuk és a mintából/halmazból fontos pontot ábrázol:
+\emph{minimum}, \emph{alsó kvartilis} ($Q_1$), \emph{medián} ($Q_2$), \emph{felső kvartilis} ($Q_3$) és \emph{maximum}. 
+A doboz a $Q_1$ és $Q_3$ közötti tartományt jelöli, benne egy vonal a mediánt jelöli. 
+\\
+
+\subsubsection*{A fontos elemek}
+\noindent Első lépésként sorba kell rendezni a 
+\begin{itemize}
+  \item $Minimum:$ a legkisebb érték a mintában.
+  \item $Medián$ ($Q_2$): a középső érték, ha páratlan számú elem van; 
+  páros számú elem esetén a két középső érték átlaga.
+  \item $Alsó\ kvartilis$ ($Q_1$): a medián alatti értékek mediánja.
+  \item $Felső\ kvartilis$ ($Q_3$): a medián feletti értékek mediánja.
+  \item $Maximum:$ a legnagyobb érték a mintában.
+  \item $IQR$ (interkvartilis terjedelem): $IQR = Q_3 - Q_1$, másnéven a doboz.
+\end{itemize}
+
+\subsubsection*{Gyakorló feladatok}
+\noindent Készítsd el az alábbi minták box plotját. 
+Számold ki az mediánt, alsó és felső kvartilist, minimumot és maximumot.
+\\
+\begin{enumerate}[label=\alph*]
+  \item \noindent Minta: $\{\,1,\ 1,\ 2,\ 2,\ 2,\ 2,\ 3,\ 4,\ 4,\ 5,\ 5,\ 6\,\}$
+  \item \noindent Minta: $\{\,12,\ 12,\ 13,\ 14,\ 14,\ 15,\ 16,\ 17,\ 17,\ 18,\ 20,\ 22,\ 25\,\}$
+  \item \noindent Minta: $\{\,7,\ 4,\ 12,\ 8,\ 7,\ 3,\ 9,\ 4,\ 15,\ 8,\ 5,\ 6,\ 7\,\}$
+  \item \noindent Minta: $\{\,24,\ 33,\ 23,\ 29,\ 25,\ 21,\ 27,\ 23,\ 24,\ 26,\ 29,\ 25,\ 22,\ 35,\ 23\,\}$
+  \item \noindent Minta: $\{\,16,\ 13,\ 24,\ 11,\ 15,\ 30,\ 20,\ 13,\ 17,\ 10,\ 18,\ 14,\ 15,\ 13,\ 16\,\}$
+\end{enumerate}
+
+\end{document}
