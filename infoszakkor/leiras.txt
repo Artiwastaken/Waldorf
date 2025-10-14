@@ -1,0 +1,8 @@
+Programozás szakkör
+
+Bevezetés a programozásba és a algoritmikus gondolkozásba.
+Célok:
+Megtanítani hogyan kell megtervezni egy egyszerű programot, algortimust.
+Érettségivel kompatibilis programozási nyelvet fogunk tanulni, C lesz vagy Phyton.
+Kérdések:
+Elsősorban fel kéne mérni hogy mennyi igény van, milyen tudással jönnek a diákok, stb, mert ehhez kell igazítani a tantervet.
