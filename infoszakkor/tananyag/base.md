@@ -14,7 +14,7 @@ int main() {
 ```
 
 ## Alapvető szintaxis
-- Minden utasítás pontosvesszővel (;) végződik.
+- Minden utasítás pontosvesszővel `;` végződik.
 - A program belépési pontja a `main` függvény.
 - A kód blokkokat kapcsos zárójelek (`{}`) határolják.
 
