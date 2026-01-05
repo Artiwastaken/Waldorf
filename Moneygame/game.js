@@ -35,10 +35,10 @@ const gameData = {
             name: "Tanár",
             job: "Pedagógus",
             grossSalary: 385000,
-            netSalary: 385000,
+            netSalary: 256000,
             fixedExpense: 20000,
             fixedExpenseDescription: "Diákhitel",
-            startingBalance: 365000,
+            startingBalance: 236000,
             livingSituation: "Albérletben lakik",
             description: "Közoktatásban dolgozó pedagógus, aki most kezdi az önálló életet.",
             specificTerms: [
@@ -52,10 +52,10 @@ const gameData = {
             name: "Fejlesztő",
             job: "Szoftverfejlesztő",
             grossSalary: 632000,
-            netSalary: 632000,
+            netSalary: 420000,
             fixedExpense: 30000,
             fixedExpenseDescription: "Tech-lízing",
-            startingBalance: 602000,
+            startingBalance: 390000,
             livingSituation: "Modern lakásban él",
             description: "IT területen dolgozó fejlesztő, akinek rendszeresen frissítenie kell az eszközeit.",
             specificTerms: [
@@ -69,10 +69,10 @@ const gameData = {
             name: "Orvos",
             job: "Kórházi szakorvos",
             grossSalary: 545000,
-            netSalary: 545000,
+            netSalary: 362000,
             fixedExpense: 85000,
             fixedExpenseDescription: "Autóhitel",
-            startingBalance: 460000,
+            startingBalance: 277000,
             livingSituation: "Saját lakásban",
             description: "Szakorvosként dolgozik, autóval jár munkába.",
             specificTerms: [
@@ -86,10 +86,10 @@ const gameData = {
             name: "Gyári munkás",
             job: "Termelési dolgozó",
             grossSalary: 432000,
-            netSalary: 432000,
+            netSalary: 287000,
             fixedExpense: 40000,
             fixedExpenseDescription: "Szerencsejáték tartozás",
-            startingBalance: 392000,
+            startingBalance: 247000,
             livingSituation: "Albérletben lakik",
             description: "Gyárban dolgozik műszakban, próbálja rendezni pénzügyeit.",
             specificTerms: [
@@ -103,10 +103,10 @@ const gameData = {
             name: "Marketinges",
             job: "Marketing asszisztens",
             grossSalary: 299000,
-            netSalary: 299000,
+            netSalary: 199000,
             fixedExpense: 15000,
             fixedExpenseDescription: "Edzőterem bérlet",
-            startingBalance: 284000,
+            startingBalance: 184000,
             livingSituation: "Szobatárssal lakik",
             description: "Junior marketinges, aki megosztott lakásban él és sokat ad az egészségére.",
             specificTerms: [
@@ -120,10 +120,10 @@ const gameData = {
             name: "Futár",
             job: "Kézbesítő",
             grossSalary: 450000,
-            netSalary: 450000,
+            netSalary: 299000,
             fixedExpense: 25000,
             fixedExpenseDescription: "Eszközbiztosítás",
-            startingBalance: 425000,
+            startingBalance: 274000,
             livingSituation: "Albérletben lakik",
             description: "Kerékpáros vagy motoros futárként dolgozik, saját eszközökkel.",
             specificTerms: [
@@ -251,197 +251,197 @@ const gameData = {
     // Random events pool
     allEvents: [
         // 🔴 Balszerencse események (40 db)
-        { id: 1, type: "bad", title: "Hűtőbaleset", description: "Elromlott a hűtőd, megromlott minden benne.", cost: 25000, happiness: -1 },
-        { id: 2, type: "bad", title: "Beázás", description: "Beázott a plafon, a biztosító nem fizet mindent.", cost: 40000, happiness: -2 },
-        { id: 3, type: "bad", title: "Büntetés", description: "Megbüntetett az ellenőr, mert lejárt a bérleted.", cost: 25000, happiness: -1 },
-        { id: 4, type: "bad", title: "Fogászat", description: "Letört a fogad, sürgősségi fogászat kell.", cost: 35000, happiness: -2 },
-        { id: 5, type: "bad", title: "Fülhallgató", description: "Elvesztetted a fülhallgatód egyik felét.", cost: 15000, happiness: -1 },
-        { id: 6, type: "bad", title: "Cipőcsere", description: "Kiszakadt a cipőd, kell egy új.", cost: 30000, happiness: 0 },
-        { id: 7, type: "bad", title: "App előfizetés", description: "Véletlenül előfizetve maradt egy app, amit nem használsz.", cost: 8000, happiness: -1 },
-        { id: 8, type: "bad", title: "Karcolt jármű", description: "Megkarcolták az autód/biciklid az utcán.", cost: 20000, happiness: -2 },
-        { id: 9, type: "bad", title: "Zárcsere", description: "Elhagytad a lakáskulcsod, zárat kell cserélni.", cost: 45000, happiness: -2 },
-        { id: 10, type: "bad", title: "Közműhátralék", description: "Kiderült, hogy tartozol a közműveknek (hátralék).", cost: 15000, happiness: -1 },
-        { id: 11, type: "bad", title: "Szülinap", description: "Meghívtak egy szülinapra, illik ajándékot vinni.", cost: 15000, happiness: 1 },
-        { id: 12, type: "bad", title: "Törött kijelző", description: "Leesett a telefonod, betört a kijelző.", cost: 50000, happiness: -3 },
-        { id: 13, type: "bad", title: "Gyorshajtás", description: "Kaptál egy gyorshajtási büntetést.", cost: 30000, happiness: -2 },
-        { id: 14, type: "bad", title: "Bicikliszerviz", description: "Kilyukadt a bringád gumija, szerviz kell.", cost: 10000, happiness: -1 },
-        { id: 15, type: "bad", title: "Rossz tej", description: "Megromlott a tej a hűtőben, mindent ki kellett dobni.", cost: 5000, happiness: -1 },
-        { id: 16, type: "bad", title: "Drágább net", description: "Drágult a net-előfizetésed.", cost: 3000, happiness: -1 },
-        { id: 17, type: "bad", title: "Beázott pince", description: "Beázott a pincéd, tönkrement pár ruhád.", cost: 20000, happiness: -2 },
-        { id: 18, type: "bad", title: "Esküvő", description: "Meghívtak egy esküvőre, kell egy öltöny/ruha.", cost: 60000, happiness: 1 },
-        { id: 19, type: "bad", title: "Elveszett kesztyű", description: "Elvesztetted a kesztyűdet a hidegben.", cost: 8000, happiness: -1 },
-        { id: 20, type: "bad", title: "Késés", description: "Késett a vonatod, lekéstél egy fontos találkozót.", cost: 0, happiness: -3 },
-        { id: 21, type: "bad", title: "Vírusos gép", description: "Vírusos lett a géped, szakember kell.", cost: 25000, happiness: -2 },
-        { id: 22, type: "bad", title: "Személyi igazolvány", description: "Lejárt a személyid, illetéket kell fizetni.", cost: 10000, happiness: -1 },
-        { id: 23, type: "bad", title: "Szállás lemondás", description: "Elfelejtettél lemondani egy szállást, levonták a díjat.", cost: 35000, happiness: -2 },
-        { id: 24, type: "bad", title: "Szakadt nadrág", description: "Kiszakadt a kedvenc nadrágod.", cost: 12000, happiness: -1 },
-        { id: 25, type: "bad", title: "Mikró", description: "Elromlott a mikród.", cost: 30000, happiness: -1 },
-        { id: 26, type: "bad", title: "Felújítási alap", description: "Ki kell fizetned a társasházi felújítási alapot.", cost: 15000, happiness: 0 },
-        { id: 27, type: "bad", title: "Esernyő", description: "Elhagytad az esernyőd az esőben.", cost: 6000, happiness: -1 },
-        { id: 28, type: "bad", title: "Betegség", description: "Megbetegedtél, drága volt a gyógyszer.", cost: 15000, happiness: -2 },
-        { id: 29, type: "bad", title: "Karcolt autó", description: "Megkarcoltad a főnököd autóját.", cost: 50000, happiness: -4 },
-        { id: 30, type: "bad", title: "Rossz busz", description: "Rossz buszra szálltál, késtél 1 órát.", cost: 0, happiness: -2 },
-        { id: 31, type: "bad", title: "Csőtörés", description: "Kiderült, hogy a lakásodban csőtörés van.", cost: 80000, happiness: -3 },
-        { id: 32, type: "bad", title: "Mobilnet", description: "Elfogyott a mobilneted, venned kell pluszt.", cost: 5000, happiness: -1 },
-        { id: 33, type: "bad", title: "Töltőkábel", description: "Tönkrement a töltőkábeled.", cost: 8000, happiness: -1 },
-        { id: 34, type: "bad", title: "Kondibérlet", description: "Elvesztetted a kondibérleted, az új drágább.", cost: 12000, happiness: -1 },
-        { id: 35, type: "bad", title: "Albérlet drágulás", description: "Megemelték az albérleted díját váratlanul.", cost: 20000, happiness: -2 },
-        { id: 36, type: "bad", title: "Gázszámla", description: "Túl sokáig volt nyitva az ablak, magas lett a gázszámla.", cost: 15000, happiness: -1 },
-        { id: 37, type: "bad", title: "Parkolási bírság", description: "Megbírságoltak a parkolásért.", cost: 12000, happiness: -1 },
-        { id: 38, type: "bad", title: "Rossz pizza", description: "Kértél egy pizzát, de ehetetlen volt és nem fizették vissza.", cost: 6000, happiness: -2 },
-        { id: 39, type: "bad", title: "Pénztárca", description: "Elhagytad a pénztárcád (benne 10.000 Ft-tal).", cost: 15000, happiness: -4 },
-        { id: 40, type: "bad", title: "Kulcs a zárban", description: "Beletört a kulcs a zárba.", cost: 30000, happiness: -2 },
+        { id: 1, type: "bad", title: "Hűtőbaleset", description: "Megállt a hűtő az éjszaka. Reggelre minden megromlott benne: a tej savanyú, a hús használhatatlan, a zöldségek latyakká váltak. Most vehetsz egy új hűtőt, vagy legalábbis fel kell töltened újra a polcokat.", cost: 25000, happiness: -1 },
+        { id: 2, type: "bad", title: "Beázás", description: "Hazaérsz, és a plafon közepén ott díszeleg egy szép barna folt. A feletti lakásból szivárog a víz. A biztosító csak a kár egy részét fizeti, a többi rád marad. Legalább a lakásod friss felfestést kap...", cost: 40000, happiness: -2 },
+        { id: 3, type: "bad", title: "Büntetés", description: "Szálltál a buszon, mint mindig, aztán jön az ellenőr. 'Bérlet?' Kicsit halványan mosolyogsz – lejárt tegnap. Az ellenőr nem viccel, fizetned kell a pótdíjat.", cost: 25000, happiness: -1 },
+        { id: 4, type: "bad", title: "Fogászat", description: "Harapod a szendvicset és hallod a kellemetlen 'krakk'-ot. Letört a fogad. Most pedig hívhatod a fogászt sürgősségben. Nem lesz olcsó, de legalább utána megint tudsz mosolyogni.", cost: 35000, happiness: -2 },
+        { id: 5, type: "bad", title: "Fülhallgató", description: "Lenyomod a zsebedre a táskádat és abból a pillanatból tudod, hogy valami baj van. Az egyik fülhallgató eltűnt valahová. A másik meg mit ér magában? Semmi. Vehetsz egy újat.", cost: 15000, happiness: -1 },
+        { id: 6, type: "bad", title: "Cipőcsere", description: "Sétálsz az utcán, és érzed hogy valami nem stimmel. Lenézel: a cipőd talpa válik két részre. Ez a cipő túljárta magát, ideje újat venni. Legalább most választhatsz valami stílusosabbat.", cost: 30000, happiness: 0 },
+        { id: 7, type: "bad", title: "App előfizetés", description: "Jön a banki értesítés, hogy levonták az app előfizetését, amit már hónapok óta nem használsz. Elfelejtetted lemondani a próbaidőszak után. Most lehet törölni, de a pénz elment.", cost: 8000, happiness: -1 },
+        { id: 8, type: "bad", title: "Karcolt jármű", description: "Kint hagytad az autód/biciklid az utcán, és valaki úgy döntött, hogy karcol egyet rajta. Nem nagy, de látszódik. És persze senki sem hagyott cédulát. Fizetni kell a javításért.", cost: 20000, happiness: -2 },
+        { id: 9, type: "bad", title: "Zárcsere", description: "Kotorsz a zsebedben, a táskádban, mindenhol. De nincs sehol. A kulcsod eltűnt. Most állsz a lakás előtt kulcs nélkül, és hívnod kell a lakatost, hogy cserélje a zárat. Ez nem lesz olcsó.", cost: 45000, happiness: -2 },
+        { id: 10, type: "bad", title: "Közműhátralék", description: "Jön a levél a postafiókba: hátralék van a közműszámládon. Valószínűleg valami adminisztrációs hiba, de fizess, mert különben jön a kamat és a figyelmeztetés.", cost: 15000, happiness: -1 },
+        { id: 11, type: "bad", title: "Szülinap", description: "Megkaptad az üzenetet: szülinapi buli a hétvégén. Természetesen illik ajándékot vinni, nem mehetsz üres kézzel. Pár órát keresel valamit, ami nem ciki, de nem is túl drága. Végül persze többről lesz szó, mint gondoltad.", cost: 15000, happiness: 1 },
+        { id: 12, type: "bad", title: "Törött kijelző", description: "Leesik a telefon. Lássuk csak... És igen, betört a kijelző. Persze nem csak egy kis repedés, hanem egy gyönyörű pókháló az egész képernyőn. Ez most drága lesz megcsináltatni, de muszáj.", cost: 50000, happiness: -3 },
+        { id: 13, type: "bad", title: "Gyorshajtás", description: "Késő voltál ma, és egy kicsit rányomtál a gázra. Persze ott volt a radarkamera pont akkor. Pár hét múlva jön a büntetés a postafiókba, és fizetned kell.", cost: 30000, happiness: -2 },
+        { id: 14, type: "bad", title: "Bicikliszerviz", description: "Kilyukadt a bringád gumija, és természetesen pont amikor nincs időd géppel szórakozni. Keress egy szervizt, és fizess, hogy megcsinálják. Legalább utána olyan lesz, mint az új.", cost: 10000, happiness: -1 },
+        { id: 15, type: "bad", title: "Rossz tej", description: "Kinyitod a hűtőt, és valami kellemetlen szagot érzel. A tej megromlott, és vele együtt minden tejtermék is. Az egészet ki kell dobni és újat venni. Micsoda pazarlás.", cost: 5000, happiness: -1 },
+        { id: 16, type: "bad", title: "Drágább net", description: "Levél a szolgáltatótól: 'Tájékoztatjuk, hogy az előfizetése ára emelkedik...' Nagyszerű. Akkor most többet kell fizetned ugyanazért. De persze nem tudod lemondani, mert kell az internet.", cost: 3000, happiness: -1 },
+        { id: 17, type: "bad", title: "Beázott pince", description: "Lementél a pincébe valamiért, és ott áll a víz. A tároló dobozban lévő ruhák teljesen átáztak, pár kedvenc darab tönkrement. Most vehetsz újakat helyettük.", cost: 20000, happiness: -2 },
+        { id: 18, type: "bad", title: "Esküvő", description: "Megjött a meghívó: esküvő! Persze örülsz nekik, de azért egész költséges lesz. Kell egy öltöny vagy ruha, mert a régi már nem illik, és persze ajándék is kell. De legalább jó buli lesz!", cost: 60000, happiness: 1 },
+        { id: 19, type: "bad", title: "Elveszett kesztyű", description: "Fázik a kezed, kotorsz a zsebedben... csak az egyik kesztyű van meg. A másik eltűnt valahol a tömegben. És persze páratlanul nem lehet használni, úgyhogy vehetsz egy új párt.", cost: 8000, happiness: -1 },
+        { id: 20, type: "bad", title: "Késés", description: "Késés. Megint. A vonat 40 perce kellett volna indulnia, de sehol. És neked meg van egy fontos találkozód. Az egész napod teljesen tönkrement, és mindenki dühös rád. Remek.", cost: 0, happiness: -3 },
+        { id: 21, type: "bad", title: "Vírusos gép", description: "A géped elkezdett furcsán viselkedni. Félnek tűnnek az ablakok, lassú minden, és folyton lefagy. Vírus van rajta. Hívnod kell egy szakembert, hogy kitisztítsa - persze pénzért.", cost: 25000, happiness: -2 },
+        { id: 22, type: "bad", title: "Személyi igazolvány", description: "Nézegetted a személyidet: lejárt. Hogy hogy nem vetted észre? Most elmehetsz a hivatalba, állsz sorban, és fizeted az illetéket. Izgalmas program.", cost: 10000, happiness: -1 },
+        { id: 23, type: "bad", title: "Szállás lemondás", description: "Elfelejtetted lemondani egy szállást amit régebben foglaltál. A szálloda levonta a teljes összeget, nincs visszatérítés. Erre ment a pénzed hiába...", cost: 35000, happiness: -2 },
+        { id: 24, type: "bad", title: "Szakadt nadrág", description: "Lehajolsz, és hallod azt a rettenetes hangot: RRRRRIP. A kedvenc nadrágod kiszakadt. Semmiképp se menthető meg, újat kell venni helyette.", cost: 12000, happiness: -1 },
+        { id: 25, type: "bad", title: "Mikró", description: "Bekapcsolod a mikrót, hallod a bzzzz hangot, aztán... semmi. Elromlott. Most vehetsz egy újat, mert mikró nélkül az élet nem ugyanaz.", cost: 30000, happiness: -1 },
+        { id: 26, type: "bad", title: "Felújítási alap", description: "Levél a társasháztól: felújítási költség. A lépcsőház, a lift, meg minden mást fel kell újítani. És természetesen mindenki fizet. Te is.", cost: 15000, happiness: 0 },
+        { id: 27, type: "bad", title: "Esernyő", description: "Esik az eső, keresed az esernyőt. De nincs sehol. Valahol elhagytad az előző héten. Most ázol, és vehetsz egy újat. Remek.", cost: 6000, happiness: -1 },
+        { id: 28, type: "bad", title: "Betegség", description: "Megbetegedtél. Lázas vagy, fáj a fejed, és mindened. Kell a gyógyszer, de az sem olcsó. Legalább pár nap múlva jobban leszel.", cost: 15000, happiness: -2 },
+        { id: 29, type: "bad", title: "Karcolt autó", description: "Parkolás közben egy kicsit odébbmész... és hallod a nyikorgást. Megkarcoltad a főnököd autóját. Most fizethetsz a kárért, és reméled, hogy nem haragszik meg túlságosan.", cost: 50000, happiness: -4 },
+        { id: 30, type: "bad", title: "Rossz busz", description: "Felszállsz a buszra, leülsz, aztán 10 perc múlva rájössz: rossz busz. Pont az ellenkező irányba mész. Most le kell szállni, vissza menni, és késel egy órát. Nagyszerű.", cost: 0, happiness: -2 },
+        { id: 31, type: "bad", title: "Csőtörés", description: "Furcsa hangokat hallasz a falból. Kihívod a szerelőt, és kiderül: csőtörés van a lakásodban. Ez nem lesz sem gyors, sem olcsó megjavítani. De muszáj.", cost: 80000, happiness: -3 },
+        { id: 32, type: "bad", title: "Mobilnet", description: "Nézegetnéd a telefont, és látod: elfogyott a mobilneted. Már megint. Nem figyeltél rá, mennyi videót néztél. Most vehetsz extra netet, hogy használhasd tovább.", cost: 5000, happiness: -1 },
+        { id: 33, type: "bad", title: "Töltőkábel", description: "A töltőkábel már rég nem tűnt stabilnak, és most teljesen tönkrement. Nem tölt, hiába dugod be. Venned kell egy újat, különben nem tudod használni a telefonod.", cost: 8000, happiness: -1 },
+        { id: 34, type: "bad", title: "Kondibérlet", description: "Keresed a kondibérletedet, de nincs sehol. Elvesztetted. Az új drágább, mert már nincs akció. És természetesen nem tudod bizonyítani, hogy volt bérleted.", cost: 12000, happiness: -1 },
+        { id: 35, type: "bad", title: "Albérlet drágulás", description: "A tulajdonos felhív: megemeli az albérlet díját jövő hónaptól. Váratlanul és jelentősen. Nem sok választásod van, vagy fizetsz, vagy költözöl.", cost: 20000, happiness: -2 },
+        { id: 36, type: "bad", title: "Gázszámla", description: "Megérkezik a gázszámla és majdnem elejted: sokkal magasabb, mint vártad. Túl sokáig volt nyitva az ablak télen. Most fizetheted meg.", cost: 15000, happiness: -1 },
+        { id: 37, type: "bad", title: "Parkolási bírság", description: "Visszajössz az autóhoz, és ott van a kis papír a szélvédőn. Parkolási bírság. Talán lejárt a jegyed, vagy rossz helyen álltál. Mindegy, fizetni kell.", cost: 12000, happiness: -1 },
+        { id: 38, type: "bad", title: "Rossz pizza", description: "Rendeltél egy pizzát, mert éhes voltál. Megérkezik, kibontod... és szörnyű. Hideg, rossz, ehetetlen. Próbálod visszaküldeni, de nem hajlandók visszafizetni. Elment a pénzed.", cost: 6000, happiness: -2 },
+        { id: 39, type: "bad", title: "Pénztárca", description: "Kotorsz a zsebedben, a táskádban... nincs sehol. A pénztárcádat valahol elhagytad. Benne volt 10.000 forint is, a kártyáid, minden. Most pótolhatod az egészet.", cost: 15000, happiness: -4 },
+        { id: 40, type: "bad", title: "Kulcs a zárban", description: "Forgatod a kulcsot a zárban, és... ketté törik. A fele bent maradt a zárban. Most hívnod kell a lakatost, hogy kiszedje és cserélje az egész zárat. Drága mulatság.", cost: 30000, happiness: -2 },
         
         // 🟢 Szerencse események (30 db)
         { id: 41, type: "good", title: "Húszezres", description: "Találtál a kabátodban egy húszezrest!", cost: -20000, happiness: 2 },
-        { id: 42, type: "good", title: "Bónusz", description: "Kaptál egy váratlan bónuszt a munkahelyeden.", cost: -50000, happiness: 3 },
-        { id: 43, type: "good", title: "Nagyi támogatás", description: "A nagyid küldött egy kis 'zsebpénzt'.", cost: -15000, happiness: 2 },
-        { id: 44, type: "good", title: "Adóvisszatérítés", description: "Visszajárt az adódból egy kisebb összeg.", cost: -30000, happiness: 1 },
-        { id: 45, type: "good", title: "Sorsjegy", description: "Nyertél a kaparós sorsjegyen, amit találtál.", cost: -10000, happiness: 2 },
-        { id: 46, type: "good", title: "Tartozás", description: "Visszafizették egy régi tartozásodat.", cost: -12000, happiness: 1 },
-        { id: 47, type: "good", title: "Mozijegy", description: "Kaptál egy ingyen mozijegyet.", cost: -5000, happiness: 1 },
-        { id: 48, type: "good", title: "Akció", description: "Akciós volt a kedvenc terméked a boltban.", cost: -5000, happiness: 1 },
-        { id: 49, type: "good", title: "Dicséret", description: "Megdicsért a főnököd mindenki előtt.", cost: 0, happiness: 3 },
-        { id: 50, type: "good", title: "Turi ruha", description: "Találtál egy szuper ruhát a turiban fillérekért.", cost: -10000, happiness: 2 },
-        { id: 51, type: "good", title: "Sorsolás", description: "Nyertél egy céges sorsoláson.", cost: -25000, happiness: 2 },
-        { id: 52, type: "good", title: "Ingyen autózás", description: "Ingyen elvittek autóval vidékre, megspóroltad a jegyet.", cost: -8000, happiness: 1 },
-        { id: 53, type: "good", title: "Ajándékkártya", description: "Kaptál egy ajándékkártyát.", cost: -10000, happiness: 1 },
-        { id: 54, type: "good", title: "Kutya jutalom", description: "Találtál egy elveszett kutyát, a gazdája jutalmat adott.", cost: -20000, happiness: 4 },
-        { id: 55, type: "good", title: "Éttermi kupon", description: "Kaptál egy 50%-os kupont a kedvenc éttermedbe.", cost: -5000, happiness: 2 },
-        { id: 56, type: "good", title: "Ebédmeghívás", description: "Valaki meghívott ebédre.", cost: -4000, happiness: 1 },
-        { id: 57, type: "good", title: "Koncertjegy", description: "Ingyen koncertjegyhez jutottál.", cost: -15000, happiness: 3 },
-        { id: 58, type: "good", title: "Marketplace", description: "Eladtál egy régi cuccot a Marketplace-en.", cost: -15000, happiness: 1 },
-        { id: 59, type: "good", title: "Kaja csomag", description: "Kaptál egy csomagot a szüleidtől (tele kajával).", cost: -20000, happiness: 2 },
-        { id: 60, type: "good", title: "Túlfizetés", description: "Jóváírták egy korábbi túlfizetésedet.", cost: -10000, happiness: 1 },
-        { id: 61, type: "good", title: "Alacsony rezsi", description: "Kiderült, hogy kevesebb a rezsid, mint hitted.", cost: -8000, happiness: 1 },
-        { id: 62, type: "good", title: "Ingyen fagyi", description: "Ingyen fagyit kaptál, mert te voltál a 100. vásárló.", cost: 0, happiness: 1 },
-        { id: 63, type: "good", title: "Lomtalanítás", description: "Találtál egy hibátlan bútort a lomtalanításon.", cost: -20000, happiness: 2 },
-        { id: 64, type: "good", title: "Masszázs", description: "Kaptál egy ingyenes masszázs kupont.", cost: 0, happiness: 3 },
-        { id: 65, type: "good", title: "Kvíznyeremény", description: "Nyertél egy online kvízen.", cost: -5000, happiness: 1 },
-        { id: 66, type: "good", title: "Csokis könyv", description: "Egy barátod visszaadta a könyvedet és hozott mellé csokit.", cost: 0, happiness: 2 },
-        { id: 67, type: "good", title: "Extra spórolás", description: "Kiszámoltad a költségvetésed és maradt extrád.", cost: 0, happiness: 1 },
-        { id: 68, type: "good", title: "Szabadnap", description: "Kaptál egy plusz szabadnapot.", cost: 0, happiness: 5 },
-        { id: 69, type: "good", title: "Kupon", description: "Találtál egy kupont a postaládában.", cost: -3000, happiness: 1 },
-        { id: 70, type: "good", title: "Dupla termék", description: "Véletlenül két terméket küldtek egy áráért.", cost: -10000, happiness: 2 },
+        { id: 42, type: "good", title: "Bónusz", description: "A főnök hívat: 'Ön kiváló munkát végzett az elmúlt hónapban, íme egy kis extra.' Nem számítottál rá, de a váratlan bónusz mindig jól jön!", cost: -50000, happiness: 3 },
+        { id: 43, type: "good", title: "Nagyi támogatás", description: "Csörög a telefon: a nagyid. 'Küldtem egy kis pénzt, vegyél magadnak valamit!' Olyan édes, és persze a pénz is jól jön.", cost: -15000, happiness: 2 },
+        { id: 44, type: "good", title: "Adóvisszatérítés", description: "Levél a NAV-tól: adóvisszatérítés! Túl sokat vontak le tavaly, és most visszajár egy rész. Nem sokat, de legalább valami!", cost: -30000, happiness: 1 },
+        { id: 45, type: "good", title: "Sorsjegy", description: "Találsz a parkban egy kaparós sorsjegyet. Mi van vesztenivalód? Megkaparod... és NYERTÉL! Kis összeg, de minden segít.", cost: -10000, happiness: 2 },
+        { id: 46, type: "good", title: "Tartozás", description: "Egy régi barátod hív: 'Emlékszel, amikor kölcsön kértem? Most van pénzem, íme visszaadom!' Már el is felejtetted, de örülsz neki!", cost: -12000, happiness: 1 },
+        { id: 47, type: "good", title: "Mozijegy", description: "Egy barátod felhív: 'Kaptam két mozijegyet, de nem tudok elmenni. Akarod?' Persze hogy akarod! Ingyen mozi, mi lehet ennél jobb?", cost: -5000, happiness: 1 },
+        { id: 48, type: "good", title: "Akció", description: "Bent vagy a boltban, és meglátod: a kedvenc terméked 50%-os akcióban! Gyorsan megveszed, mielőtt más elkapja. Spór!", cost: -5000, happiness: 1 },
+        { id: 49, type: "good", title: "Dicséret", description: "A főnök mindenki előtt megdicsér: 'Lássatok példát ebből a munkából!' Kicsit pirulsz, de belül örülsz. Jó érzés, amikor értékelik a munkád!", cost: 0, happiness: 3 },
+        { id: 50, type: "good", title: "Turi ruha", description: "Bent vagy a turiban, és találsz egy szuper ruhát - szinte új! És hihetetlenül olcsó. Ez az a nap, amikor a turi kifizeti magát.", cost: -10000, happiness: 2 },
+        { id: 51, type: "good", title: "Sorsolás", description: "Email érkezik: 'Gratulálunk, Ön nyert céges sorsolásunkon!' Fel se adtad a neved, de valaki megtette helyetted. Szerencse!", cost: -25000, happiness: 2 },
+        { id: 52, type: "good", title: "Ingyen autózás", description: "A szomszéd felhív: 'Megyünk vidékre hétvégén, nem akarsz velünk jönni?' Ingyen fuvar, beszélgetés, és megspórolod a vonatjegyet is.", cost: -8000, happiness: 1 },
+        { id: 53, type: "good", title: "Ajándékkártya", description: "A postás csenget: csomag. Kinyitod, és egy ajándékkártya van benne egy baráttól, akit régen nem láttál. Milyen kedves!", cost: -10000, happiness: 1 },
+        { id: 54, type: "good", title: "Kutya jutalom", description: "Sétálsz az utcán, és látsz egy elveszett kutyust. Elolvasod a nyakörvén a telefonszámot, felhívod a gazdát. Annyira hálás, hogy jutalmul ad egy kis pénzt!", cost: -20000, happiness: 4 },
+        { id: 55, type: "good", title: "Éttermi kupon", description: "A postaládában találsz egy kupont: 50% kedvezmény a kedvenc étteremedben! Pont jókor jött, mert rég voltál ott.", cost: -5000, happiness: 2 },
+        { id: 56, type: "good", title: "Ebédmeghívás", description: "Egy kolléga odalép: 'Ma a szülinapom, meghívlak ebédre!' Ingyen kaja, és még jól is érzed magad a csapattal. Win-win!", cost: -4000, happiness: 1 },
+        { id: 57, type: "good", title: "Koncertjegy", description: "Egy haver felhív: 'Kaptam két jegyet egy koncertre, de a párom nem tud jönni. Akarsz?' PERSZE hogy akarsz! Ez a hétvége most lett sokkal jobb.", cost: -15000, happiness: 3 },
+        { id: 58, type: "good", title: "Marketplace", description: "Kiraktál egy régi cuccot a Marketplace-re, csak hogy szabadulj tőle. Pár óra múlva jön az üzenet: 'Megveszem!' És még pénzt is kapsz érte!", cost: -15000, happiness: 1 },
+        { id: 59, type: "good", title: "Kaja csomag", description: "Anyukád/apukád felhív: 'Küldtem neked egy kis csomagot.' Másnap megérkezik, tele befőttel, süteménnyel és minden jóval. Ez az igazi szeretet!", cost: -20000, happiness: 2 },
+        { id: 60, type: "good", title: "Túlfizetés", description: "Banki értesítés: visszautaltak egy összeget, amit tévedésből kétszer fizettél ki korábban. Eszedbe se jutott, de jól jön!", cost: -10000, happiness: 1 },
+        { id: 61, type: "good", title: "Alacsony rezsi", description: "Jön a rezsiértesítő, és furcsán kevésnek tűnik. Megnézed kétszer: tényleg alacsonyabb, mint gondoltad! Végre valami jó hír a számlákon.", cost: -8000, happiness: 1 },
+        { id: 62, type: "good", title: "Ingyen fagyi", description: "Állsz a sorban a fagyizóban, és a pult mögül kiált: 'Ön a 100. vásárló ma! Ingyen fagyi!' Ez tényleg a te szerencsés napod.", cost: 0, happiness: 1 },
+        { id: 63, type: "good", title: "Lomtalanítás", description: "Sétálsz az utcán, lomtalanítás van. Meglátsz egy bútort, ami szinte új! Gyorsan hazacipeled. Most van egy tök jó bútor, ingyen!", cost: -20000, happiness: 2 },
+        { id: 64, type: "good", title: "Masszázs", description: "Nyertél egy sorsoláson: ingyenes masszázs kupon! Pont kellett is, mert nagyon fáj a hátad a sok munka után. Végre pihenhetsz egy kicsit.", cost: 0, happiness: 3 },
+        { id: 65, type: "good", title: "Kvíznyeremény", description: "Kitöltöttél egy online kvízt unalomból. Pár nap múlva jön az email: nyertél! Kis pénz, de mindig jobb, mint a semmi.", cost: -5000, happiness: 1 },
+        { id: 66, type: "good", title: "Csokis könyv", description: "Egy barátod jön: 'Itt a könyved, amit kölcsönkértem. Bocsi a késésért, hoztam csokit!' Kedves gesztus, és te imádsz csokit.", cost: 0, happiness: 2 },
+        { id: 67, type: "good", title: "Extra spórolás", description: "Leülsz számolni: mennyit költöttél ezen a héten? És wow, kevesebbet, mint gondoltad! Maradt egy kis extra pénz a végén.", cost: 0, happiness: 1 },
+        { id: 68, type: "good", title: "Szabadnap", description: "A főnök hívat: 'Köszönöm a kemény munkát. Itt egy plusz szabadnap!' Hirtelen már tervezed is, mit fogsz csinálni vele. Ez aztán az ajándék!", cost: 0, happiness: 5 },
+        { id: 69, type: "good", title: "Kupon", description: "Kinyitod a postaládát, és ott van: egy kupon a kedvenc boltodba. Nem sok, de egy kis kedvezmény mindig jól jön!", cost: -3000, happiness: 1 },
+        { id: 70, type: "good", title: "Dupla termék", description: "Kinyitod a csomagot, amit rendeltél, és benne két ugyanolyan termék van! Tévedésből küldtek kettőt egy helyett. Felhívod őket, de azt mondják: 'Tartsa meg!' Szerencse!", cost: -10000, happiness: 2 },
         
         // 🟡 Vegyes/Döntések (30 db)
-        { id: 71, type: "choice", title: "Milánó", description: "Akciós a repjegy Milánóba! Mész?", choices: [
+        { id: 71, type: "choice", title: "Milánó", description: "Emailben jön az értesítés: 'Flash sale! Milánó retúr jegy most csak 40.000 Ft!' Ez az esély talán soha nem jön vissza. Mész?", choices: [
             { text: "Megveszem! 🛫", cost: 40000, happiness: 4 },
             { text: "Nem, maradok.", cost: 0, happiness: 0 }
         ]},
-        { id: 72, type: "choice", title: "Jótékonyság", description: "Jótékonysági gyűjtés az irodában. Adsz?", choices: [
+        { id: 72, type: "choice", title: "Jótékonyság", description: "A kolléga körbeviszi a listát: 'Gyűjtünk egy jó célra, aki tud, az adjon.' Mindenki néz. Te mit teszel?", choices: [
             { text: "Adok 💝", cost: 5000, happiness: 2 },
             { text: "Nem adok", cost: 0, happiness: -1 }
         ]},
-        { id: 73, type: "choice", title: "Cuki cipő", description: "Megláttál egy cuki cipőt. Megveszed?", choices: [
+        { id: 73, type: "choice", title: "Cuki cipő", description: "Elmentél a plázába csak sétálni, de meglátod a kirakatban: pontosan azt a cipőt, amit mindig akartál. Drága, de annyira jó!", choices: [
             { text: "Megveszem! 👟", cost: 35000, happiness: 3 },
             { text: "Nem kell", cost: 0, happiness: -2 }
         ]},
-        { id: 74, type: "choice", title: "Rossz hangulat", description: "Rossz a hangulatod. Elmész bulizni?", choices: [
+        { id: 74, type: "choice", title: "Rossz hangulat", description: "Szar volt a hét, fáradt vagy, és egyáltalán nem érzed jól magad. De a haverok hívnak: 'Gyere már, jót fog tenni!' Elmész?", choices: [
             { text: "Igen, bulizom! 🎉", cost: 20000, happiness: 3 },
             { text: "Maradok otthon", cost: 0, happiness: -3 }
         ]},
-        { id: 75, type: "choice", title: "Laptop javítás", description: "Elromlott a laptopod. Megjavíttatod vagy vársz?", choices: [
+        { id: 75, type: "choice", title: "Laptop javítás", description: "A laptopod többé nem kapcsol be rendesen. Néha működik, néha nem. A szervizes azt mondja: javítani kell, vagy hamarosan teljesen megdöglik.", choices: [
             { text: "Megjavíttatom 💻", cost: 40000, happiness: 0 },
             { text: "Várok még", cost: 0, happiness: -3 }
         ]},
-        { id: 76, type: "choice", title: "Túra", description: "Meghívnak egy hétvégi túrára. Mész?", choices: [
+        { id: 76, type: "choice", title: "Túra", description: "A barátaid szerveznek egy hétvégi túrát a hegyekbe. Szép lesz, jó társaság, de azért pénzbe kerül a szállás meg a kaja.", choices: [
             { text: "Megyek! 🏔️", cost: 15000, happiness: 3 },
             { text: "Nem megyek", cost: 0, happiness: -1 }
         ]},
-        { id: 77, type: "choice", title: "Tanfolyam", description: "Tanfolyamra mehetnél, ami emeli a béred később.", choices: [
+        { id: 77, type: "choice", title: "Tanfolyam", description: "Láttad a hirdetést: szakmai tanfolyam, ami után jobb állást kaphatsz vagy több fizetést. Drága, de befektetés a jövőbe.", choices: [
             { text: "Beiratkozom 📚", cost: 50000, happiness: 1 },
             { text: "Nem éri meg", cost: 0, happiness: 0 }
         ]},
-        { id: 78, type: "choice", title: "Extra műszak", description: "Kértél egy extra műszakot. Bevállalod?", choices: [
+        { id: 78, type: "choice", title: "Extra műszak", description: "A főnök kérdezi: 'Tudnál szombaton is bejönni? Persze fizetjük.' Kell a pénz, de kell a pihenés is...", choices: [
             { text: "Bevállalom 💪", cost: -30000, happiness: -3 },
             { text: "Nem vállalom", cost: 0, happiness: 0 }
         ]},
-        { id: 79, type: "choice", title: "Kuponos vacsora", description: "Van egy kuponod: fele árú vacsora.", choices: [
+        { id: 79, type: "choice", title: "Kuponos vacsora", description: "Találtál a fiókban egy kupont: 50% kedvezmény egy étteremben. Lejár hamarosan, de azért még mindig kerül valamibe.", choices: [
             { text: "Felhasználom 🍽️", cost: 8000, happiness: 2 },
             { text: "Nem használom", cost: 0, happiness: 0 }
         ]},
-        { id: 80, type: "choice", title: "Olcsóbb kondi", description: "Találtál egy olcsóbb konditermet. Átiratkozol?", choices: [
+        { id: 80, type: "choice", title: "Olcsóbb kondi", description: "Új edzőterem nyílt a közelben, és olcsóbb, mint a jelenlegi. Kicsit kisebb, kevésbé fancy, de spórolnál vele.", choices: [
             { text: "Átiratkozom 🏋️", cost: -5000, happiness: -1 },
             { text: "Maradok", cost: 0, happiness: 0 }
         ]},
-        { id: 81, type: "choice", title: "Hétvégi munka", description: "Felkérnek egy kis plusz munkára hétvégén.", choices: [
+        { id: 81, type: "choice", title: "Hétvégi munka", description: "A főnök kérdezi: 'Szombaton lenne egy kis plusz munka, ha vállalod.' Fizetés jár érte, de elviszik a hétvégédet.", choices: [
             { text: "Bevállalom", cost: -25000, happiness: -2 },
             { text: "Nem vállalom", cost: 0, happiness: 0 }
         ]},
-        { id: 82, type: "choice", title: "Rendelés", description: "Rendelnél vacsorát, mert lusta vagy főzni.", choices: [
+        { id: 82, type: "choice", title: "Rendelés", description: "Este van, fáradt vagy, és éhes. A hűtőben van kaja, de főzni kéne. Vagy csak egyszerűen rendelsz valamit?", choices: [
             { text: "Rendelek 🍕", cost: 6000, happiness: 1 },
             { text: "Főzök inkább", cost: 0, happiness: 0 }
         ]},
-        { id: 83, type: "choice", title: "Kávéfőző", description: "Elromlott a kávéfőző. Veszel újat?", choices: [
+        { id: 83, type: "choice", title: "Kávéfőző", description: "A kávéfőződ tönkrement. Reggel már nem tudod megcsinálni a kávéd. Veszel egy újat most, vagy csak majd később?", choices: [
             { text: "Veszek újat ☕", cost: 20000, happiness: 1 },
             { text: "Majd később", cost: 0, happiness: -2 }
         ]},
-        { id: 84, type: "choice", title: "Kölcsön", description: "Valaki megkér, hogy kölcsönözz neki.", choices: [
+        { id: 84, type: "choice", title: "Kölcsön", description: "Egy barátod üzent: 'Tudok kérni egy kis pénzt? Visszaadom jövő héten, szó!' Mit válaszolsz?", choices: [
             { text: "Kölcsönadok 🤝", cost: 10000, happiness: 1 },
             { text: "Nem adok", cost: 0, happiness: -1 }
         ]},
-        { id: 85, type: "choice", title: "Könyv", description: "Találtál egy szuper könyvet.", choices: [
+        { id: 85, type: "choice", title: "Könyv", description: "A könyvesboltban böngészve találsz egy könyvet, amit rég akartál elolvasni. Itt van most, a kezedben. Megveszed?", choices: [
             { text: "Megveszem 📖", cost: 6000, happiness: 2 },
             { text: "Nem veszem", cost: 0, happiness: 0 }
         ]},
-        { id: 86, type: "choice", title: "Borkóstoló", description: "Meghívnak egy borkóstolóra.", choices: [
+        { id: 86, type: "choice", title: "Borkóstoló", description: "Meghívót kaptál egy borkóstolóra: fancy helyszín, jó borok, érdekes emberek. De azért belépődíj van.", choices: [
             { text: "Megyek 🍷", cost: 15000, happiness: 2 },
             { text: "Nem megyek", cost: 0, happiness: 0 }
         ]},
-        { id: 87, type: "choice", title: "Új tévé", description: "Lecserélnéd a régi tévéd.", choices: [
+        { id: 87, type: "choice", title: "Új tévé", description: "A tévéd régi, kicsi, és rossz a képe. Látsz a boltban egy modern smart TV-t: nagy, szép, de nagyon drága. Megveszed?", choices: [
             { text: "Veszek újat 📺", cost: 100000, happiness: 4 },
             { text: "Marad a régi", cost: 0, happiness: 0 }
         ]},
-        { id: 88, type: "choice", title: "Vendégek", description: "Váratlan vendégek jönnek. Kell kaja/ital.", choices: [
+        { id: 88, type: "choice", title: "Vendégek", description: "Hívnak: 'Megyunk hozád ma este, ok?' És már útban is vannak. A hűtő üres, nincs ital, nincs semmi. Mit csinálsz?", choices: [
             { text: "Bevásárolok 🛒", cost: 15000, happiness: 2 },
             { text: "Megoldom másként", cost: 0, happiness: -1 }
         ]},
-        { id: 89, type: "choice", title: "Tetoválás", description: "Szeretnél egy új tetoválást/fodrászt.", choices: [
+        { id: 89, type: "choice", title: "Tetoválás", description: "Rég gondolkodsz rajta: csináltatnál egy új tetoválást vagy elmennél egy proff fodrászhoz. Drága, de jól éreznéd magad utána.", choices: [
             { text: "Megcsináltatom ✂️", cost: 30000, happiness: 3 },
             { text: "Nem most", cost: 0, happiness: 0 }
         ]},
-        { id: 90, type: "choice", title: "Porszívó", description: "Tönkrement a porszívód.", choices: [
+        { id: 90, type: "choice", title: "Porszívó", description: "A porszívód feladta a lelkét. Már nem szív, csak hangot ad. Veszel egy újat most, vagy vársz még egy kicsit?", choices: [
             { text: "Veszek újat", cost: 40000, happiness: -1 },
             { text: "Majd később", cost: 0, happiness: -2 }
         ]},
-        { id: 91, type: "choice", title: "Telekocsi", description: "Lehetőséged van telekocsizni munkába.", choices: [
+        { id: 91, type: "choice", title: "Telekocsi", description: "Találtál egy telekocsizó csoportot, akik minden nap ugyanabba az irányba mennek munkába. Olcsóbb lenne, mint a saját autó/busz.", choices: [
             { text: "Beállok 🚗", cost: -10000, happiness: 0 },
             { text: "Marad a régi", cost: 0, happiness: 0 }
         ]},
-        { id: 92, type: "choice", title: "Társasjáték", description: "Megláttál egy drága társasjátékot.", choices: [
+        { id: 92, type: "choice", title: "Társasjáték", description: "A boltban meglátod azt a társasjátékot, amit a haverok mindig említenek. Drága, de biztos sokat fogtok játszani vele.", choices: [
             { text: "Megveszem 🎲", cost: 20000, happiness: 2 },
             { text: "Nem veszem", cost: 0, happiness: 0 }
         ]},
-        { id: 93, type: "choice", title: "Streaming", description: "Új streaming szolgáltatás indul. Előfizetsz?", choices: [
+        { id: 93, type: "choice", title: "Streaming", description: "Indul egy új streaming szolgáltatás, rajta vannak azok a sorozatok, amiket mindenki néz. Előfizetsz rá?", choices: [
             { text: "Előfizetek 📺", cost: 4000, happiness: 1 },
             { text: "Nem kell", cost: 0, happiness: 0 }
         ]},
-        { id: 94, type: "choice", title: "Nyelvtanfolyam", description: "Beiratkozol egy nyelvtanfolyamra.", choices: [
+        { id: 94, type: "choice", title: "Nyelvtanfolyam", description: "Mindig is akartál megtanulni egy nyelvt rendesen. Most van lehetőséged: nyelvtanfolyam, de nem olcsó. Megcsinálod?", choices: [
             { text: "Beiratkozom 🗣️", cost: 40000, happiness: 1 },
             { text: "Nem most", cost: 0, happiness: 0 }
         ]},
-        { id: 95, type: "choice", title: "Rokonlátogatás", description: "Meglátogatod a távoli rokonaidat. Utazási költség:", choices: [
+        { id: 95, type: "choice", title: "Rokonlátogatás", description: "A távoli rokonaid hívnak: 'Rég láttunk, gyere már látogatóba!' Szereted őket, de messze vannak, utazási költséggel jár.", choices: [
             { text: "Megyek 🚂", cost: 15000, happiness: 2 },
             { text: "Nem megyek", cost: 0, happiness: 0 }
         ]},
-        { id: 96, type: "choice", title: "Powerbank", description: "Veszel egy napelemes powerbanket.", choices: [
+        { id: 96, type: "choice", title: "Powerbank", description: "Látsz egy napelemes powerbanket a boltban. Jó lenne utazáshoz, hogy mindig legyen töltve a telefon. De kell ez most?", choices: [
             { text: "Megveszem 🔋", cost: 12000, happiness: 1 },
             { text: "Nem kell", cost: 0, happiness: 0 }
         ]},
-        { id: 97, type: "choice", title: "Befektetés", description: "Kapsz egy befektetési ajánlatot egy havertól. (50% esély +40k vagy 0k)", choices: [
+        { id: 97, type: "choice", title: "Befektetés", description: "Egy haver felhív: 'Van egy biztos befektetési lehetőség, dupla profitot hozhat!' De persze kockázatos is. (50% esély +40k vagy 0k)", choices: [
             { text: "Befektetek 💰", cost: 20000, happiness: 0, special: "investment" },
             { text: "Nem fektetem be", cost: 0, happiness: 0 }
         ]},
-        { id: 98, type: "choice", title: "Szerencsejáték", description: "Teszel fel 5.000 Ft-ot? (1-4: vesztesz, 5-6: nyersz 20k-t)", choices: [
+        { id: 98, type: "choice", title: "Szerencsejáték", description: "A barátaid fogadnak: 'Dobj egy kockával! Ha 5-6 jön, mi adunk 20 ezret, ha nem, te adsz 5-öt!' Bevállalod? (1-4: vesztesz, 5-6: nyersz)", choices: [
             { text: "Felteszem 🎲", cost: 5000, happiness: 0, special: "gamble" },
             { text: "Nem teszek fel", cost: 0, happiness: 0 }
         ]},
-        { id: 99, type: "choice", title: "Éves bérlet", description: "Akciós az éves bérlet, de drága. (Később megtérül)", choices: [
+        { id: 99, type: "choice", title: "Éves bérlet", description: "Akciós az éves bérlet most: drága egyben, de hosszútávon megspórolod vele a pénzét. Befektetsz? (Később megtérül)", choices: [
             { text: "Megveszem 🎫", cost: 80000, happiness: 0, special: "season-pass" },
             { text: "Nem veszem", cost: 0, happiness: 0 }
         ]},
-        { id: 100, type: "choice", title: "Kutya befogadás", description: "Találtál egy kutyát az utcán és befogadtad. (30k havonta)", choices: [
+        { id: 100, type: "choice", title: "Kutya befogadás", description: "Találtál az utcán egy kutyust. Nincs gazdija, nyakörv sincs rajta. Olyan kedves... Megtartod? (Havonta 30k kerül élelme, orvos, stb.)", choices: [
             { text: "Megtartom 🐕", cost: 30000, happiness: 10, special: "dog" },
             { text: "Nem tartom meg", cost: 0, happiness: -2 }
         ]}

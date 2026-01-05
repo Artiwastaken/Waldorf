@@ -675,10 +675,29 @@ header h1 {
 
     .status-bar {
         grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+    
+    .status-item .label {
+        font-size: 0.75rem;
+    }
+    
+    .status-item .value {
+        font-size: 1rem;
+    }
+    
+    .status-item {
+        gap: 2px;
     }
     
     .savings-investment-container {
-        flex-direction: row;
+        flex-direction: column;
+    }
+    
+    .savings-investment-container > * {
+        flex: 1 1 auto;
     }
 
     .event-card {
