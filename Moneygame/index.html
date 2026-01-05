@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Nagy Túlélő: Az Első Hónap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 Pénzügyi szimuláció játék</h1>
+            <p class="subtitle">Pénzügyi szimuláció valós idejű kihívásokkal</p>
+        </header>
+
+        <!-- Character Selection Screen -->
+        <section id="characterSelection" class="screen active">
+            <h2>Válassz Karaktert!</h2>
+            <div id="characterCards" class="character-grid">
+                <!-- Characters will be loaded dynamically -->
+            </div>
+            <button id="startGameBtn" class="btn-primary" disabled>Játék Indítása</button>
+        </section>
+
+        <!-- Main Game Screen -->
+        <section id="gameScreen" class="screen">
+            <!-- Status Bar -->
+            <div class="status-bar">
+                <div class="status-item">
+                    <span class="label">Dátum:</span>
+                    <span id="currentDate" class="value"></span>
+                </div>
+                <div class="status-item">
+                    <span class="label">Hónap:</span>
+                    <span id="currentMonth" class="value">-</span>
+                </div>
+                <div class="status-item">
+                    <span class="label">Hét:</span>
+                    <span id="currentWeek" class="value">1/4</span>
+                </div>
+                <div class="status-item">
+                    <span class="label">💰 Egyenleg:</span>
+                    <span id="balance" class="value">0 Ft</span>
+                </div>
+                <div class="status-item">
+                    <span class="label">😊 Boldogság:</span>
+                    <span id="happiness" class="value">50/100</span>
+                </div>
+            </div>
+
+            <!-- Character Info -->
+            <div class="character-info">
+                <h3 id="characterName">Karakter neve</h3>
+                <div class="info-grid">
+                    <div><strong>Foglalkozás:</strong> <span id="characterJob"></span></div>
+                    <div><strong>Bruttó bér:</strong> <span id="grossSalary"></span></div>
+                    <div><strong>Nettó bér:</strong> <span id="netSalary"></span></div>
+                    <div><strong>Élethelyzet:</strong> <span id="livingSituation"></span></div>
+                </div>
+                
+                <!-- Collapsible Info Panel -->
+                <div class="info-panel">
+                    <button class="info-toggle" id="infoToggle">
+                        <span>ℹ️ Pénzügyi fogalmak magyarázata</span>
+                        <span class="arrow">▼</span>
+                    </button>
+                    <div class="info-content" id="infoContent">
+                        <div class="info-section">
+                            <h4>💰 Bruttó bér</h4>
+                            <p>A munkaszerződésben megállapított összeg, amit a munkáltató fizet. Ebből még adókat és járulékokat kell fizetni.</p>
+                        </div>
+                        <div class="info-section">
+                            <h4>💵 Nettó bér</h4>
+                            <p>Az az összeg, amit ténylegesen kézhez kapsz, miután levonták az adókat és járulékokat. Ezt tudod elkölteni!</p>
+                        </div>
+                        <div class="info-section">
+                            <h4>📊 Levonások</h4>
+                            <p>A bruttó bérből le kell vonni:</p>
+                            <ul>
+                                <li><strong>SZJA (személyi jövedelemadó):</strong> 15%</li>
+                                <li><strong>Járulékok:</strong> kb. 18.5% (TB, nyugdíjjárulék stb.)</li>
+                            </ul>
+                            <p>Összesen kb. 33-35% megy el adókra és járulékokra.</p>
+                        </div>
+                        <div class="info-section character-specific" id="characterSpecificInfo">
+                            <!-- Character-specific terms will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weekly Actions -->
+            <div id="weeklyActions" class="weekly-actions">
+                <h3>Heti döntések</h3>
+                
+                <!-- Fixed Expenses -->
+                <div class="expense-category">
+                    <h4>🏠 Lakhatás</h4>
+                    <div id="housingOptions" class="options-grid">
+                        <!-- Options will be loaded dynamically -->
+                    </div>
+                </div>
+
+                <div class="expense-category">
+                    <h4>🍽️ Étkezés</h4>
+                    <div id="foodOptions" class="options-grid">
+                        <!-- Options will be loaded dynamically -->
+                    </div>
+                </div>
+
+                <div class="expense-category">
+                    <h4>🎉 Szórakozás</h4>
+                    <div id="entertainmentOptions" class="options-grid">
+                        <!-- Options will be loaded dynamically -->
+                    </div>
+                </div>
+
+                <div class="expense-category">
+                    <h4>💾 Megtakarítás</h4>
+                    
+                    <!-- Savings and Investment Container -->
+                    <div class="savings-investment-container">
+                        
+                        
+                        <!-- Investment Options -->
+                        <div class="investment-options">
+                        <h5>Hová kerüljön a megtakarítás?</h5>
+                        <div class="investment-choice">
+                            <input type="radio" id="investNone" name="investment" value="none" checked>
+                            <label for="investNone">
+                                <strong>📦 Szabad megtakarítás</strong>
+                                <span class="investment-desc">Bármikor felveheted</span>
+                            </label>
+                        </div>
+                        <div class="investment-choice">
+                            <input type="radio" id="investBank" name="investment" value="bank">
+                            <label for="investBank">
+                                <strong>🏦 Bank (lekötött betét)</strong>
+                                <span class="investment-desc">1.5% kamat, 6 hónap után kapod vissza</span>
+                            </label>
+                        </div>
+                        <div class="investment-choice">
+                            <input type="radio" id="investStock" name="investment" value="stock">
+                            <label for="investStock">
+                                <strong>📈 Tőzsde (részvények)</strong>
+                                <span class="investment-desc">Következő hónap végén visszakapod, -3% és +5% között</span>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- Savings Display -->
+                        <div class="savings-display">
+                            <div class="savings-item">
+                                <span class="label">💵 Szabad megtakarítás:</span>
+                                <span id="freeSavings" class="value">0 Ft</span>
+                            </div>
+                            <div class="savings-item">
+                                <span class="label">🔒 Lekötött (bank + tőzsde):</span>
+                                <span id="lockedSavings" class="value">0 Ft</span>
+                            </div>
+                            <div class="savings-item total">
+                                <span class="label">💰 Összes megtakarítás:</span>
+                                <span id="totalSavings" class="value">0 Ft</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <div class="savings-input">
+                        <label for="savingsAmount">Mennyit teszel félre?</label>
+                        <input type="number" id="savingsAmount" min="0" step="1000" value="0">
+                        <span>Ft</span>
+                    </div>
+                    <div class="auto-savings-checkbox">
+                        <input type="checkbox" id="autoSavings">
+                        <label for="autoSavings">Havonta automatikus megtakarítás (minden hónapban levonja ugyanezt az összeget)</label>
+                    </div>
+                </div>
+
+                <button id="confirmWeekBtn" class="btn-primary">Hét Lezárása</button>
+            </div>
+
+            <!-- Event Display -->
+            <div id="eventDisplay" class="event-display hidden">
+                <div class="event-card">
+                    <h3 id="eventTitle">Esemény</h3>
+                    <p id="eventDescription"></p>
+                    <div id="eventChoices" class="event-choices">
+                        <!-- Event choices will be loaded dynamically -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transaction History -->
+            <div class="transaction-history">
+                <h3>Tranzakciós előzmények</h3>
+                <div id="transactionList" class="transaction-list">
+                    <!-- Transactions will be added dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Over Screen -->
+        <section id="gameOverScreen" class="screen">
+            <h2 id="gameOverTitle">Játék Vége</h2>
+            <div class="results">
+                <div class="result-item">
+                    <span class="label">Végső egyenleg:</span>
+                    <span id="finalBalance" class="value"></span>
+                </div>
+                <div class="result-item">
+                    <span class="label">Megtakarítás:</span>
+                    <span id="finalSavings" class="value"></span>
+                </div>
+                <div class="result-item">
+                    <span class="label">Végső boldogság:</span>
+                    <span id="finalHappiness" class="value"></span>
+                </div>
+                <div id="gameOverMessage" class="game-over-message"></div>
+            </div>
+            <button id="restartBtn" class="btn-primary">Új Játék</button>
+        </section>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
